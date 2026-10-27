@@ -10,10 +10,12 @@ Juega con **teclado y ratón** en los juegos que piden mando. Vertex crea un **m
 
 **[Descargar la última versión](https://github.com/Abnaris/vertex-emulador/releases/latest)** → en "Assets", pulsa `VertexEmulador-Instalar-….exe`.
 
-1. Abre el instalador y acepta los términos.
-2. Windows pedirá permiso de administrador para instalar los controladores: pulsa **Sí**.
-3. Si te pide reiniciar, reinicia la PC.
-4. Abre **Vertex Emulador**: tienes **3 días de prueba gratis**.
+1. **Antes de instalar, apaga la Integridad de memoria:** abre **Seguridad de Windows → Seguridad del dispositivo → Detalles de aislamiento del núcleo** y pon **Integridad de memoria** en **Desactivado**. Reinicia la PC.
+   Sin este paso Windows no deja instalar Interception y el juego también verá tu ratón.
+2. Abre el instalador y acepta los términos.
+3. Windows pedirá permiso de administrador para instalar los controladores: pulsa **Sí**.
+4. Cuando termine, **reinicia** la PC.
+5. Abre **Vertex Emulador**: tienes **3 días de prueba gratis**.
 
 ¿Sale "Windows protegió su PC"? Pulsa **Más información → Ejecutar de todas formas**. Pasa con los programas nuevos que Windows aún no conoce.
 
