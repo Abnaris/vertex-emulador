@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de Vertex Emulador</title>
+<style>
+:root {
+  --fondo: #f6f7fb; --tarjeta: #ffffff; --texto: #1b1e27; --tenue: #5b6274; --linea: #e2e5ec;
+  --acento: #6d4ce8; --acento-suave: #efeafd; --aviso: #b45309; --aviso-suave: #fdf3e2; --ok: #15803d; --ok-suave: #e7f6ec;
+  --codigo: #eef0f5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #0d0f16; --tarjeta: #161a25; --texto: #eaecf2; --tenue: #9aa2b6; --linea: #2a3040;
+    --acento: #a58bff; --acento-suave: #241d42; --aviso: #f5a623; --aviso-suave: #2e2414; --ok: #4ade80; --ok-suave: #14281c;
+    --codigo: #232838;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.65 "Segoe UI", system-ui, sans-serif; }
+.pagina { max-width: 860px; margin: 0 auto; padding: 36px 18px 80px; }
+header h1 { font-size: 2.1rem; margin: 0 0 4px; }
+header p { margin: 0; color: var(--tenue); }
+nav { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 14px; padding: 16px 22px; margin: 26px 0; }
+nav strong { display: block; margin-bottom: 6px; }
+nav ol { margin: 0; padding-left: 22px; columns: 2; column-gap: 32px; }
+nav a { color: var(--acento); text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+section { background: var(--tarjeta); border: 1px solid var(--linea); border-radius: 14px; padding: 22px 26px; margin: 18px 0; }
+h2 { font-size: 1.4rem; margin: 0 0 12px; }
+h3 { font-size: 1.08rem; margin: 22px 0 6px; }
+ol, ul { padding-left: 22px; }
+li { margin: 5px 0; }
+kbd { display: inline-block; padding: 0 8px; border: 1px solid var(--linea); border-bottom-width: 3px; border-radius: 7px; background: var(--codigo); font: 600 0.88rem/1.6 "Segoe UI", sans-serif; }
+table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.97rem; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--linea); vertical-align: top; }
+th { color: var(--tenue); font-weight: 600; }
+.nota, .aviso, .bien { border-radius: 12px; padding: 12px 16px; margin: 14px 0; }
+.nota { background: var(--acento-suave); } .aviso { background: var(--aviso-suave); } .bien { background: var(--ok-suave); }
+.nota strong { color: var(--acento); } .aviso strong { color: var(--aviso); } .bien strong { color: var(--ok); }
+.pasos { counter-reset: paso; list-style: none; padding-left: 0; }
+.pasos > li { counter-increment: paso; position: relative; padding-left: 44px; margin: 14px 0; }
+.pasos > li::before { content: counter(paso); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: var(--acento); color: #fff; font-weight: 700; display: grid; place-items: center; }
+details { border: 1px solid var(--linea); border-radius: 12px; padding: 10px 16px; margin: 10px 0; background: var(--fondo); }
+details summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: 6px; }
+@media (max-width: 640px) { nav ol { columns: 1; } section { padding: 18px; } }
+</style>
+</head>
+<body>
+<div class="pagina">
+
+<header>
+  <h1>🎮 Vertex Emulador</h1>
+  <p>Manual fácil · juega con teclado y ratón en juegos que piden mando</p>
+</header>
+
+<nav>
+  <strong>Contenido</strong>
+  <ol>
+    <li><a href="#que">¿Qué es?</a></li>
+    <li><a href="#antes">Antes de instalar</a></li>
+    <li><a href="#instalar">Instalar</a></li>
+    <li><a href="#primera">Tu primera partida</a></li>
+    <li><a href="#cod">Ajustes de Call of Duty</a></li>
+    <li><a href="#sensibilidad">Sensibilidad</a></li>
+    <li><a href="#teclas">Cambiar las teclas</a></li>
+    <li><a href="#especiales">Doble toque, mantener, alternar y turbo</a></li>
+    <li><a href="#calibrar">Calibrar (solo si hace falta)</a></li>
+    <li><a href="#perfiles">Perfiles</a></li>
+    <li><a href="#atajos">Teclas rápidas</a></li>
+    <li><a href="#problemas">Problemas y cómo arreglarlos</a></li>
+    <li><a href="#licencia">Licencia y ayuda</a></li>
+    <li><a href="#desinstalar">Desinstalar</a></li>
+  </ol>
+</nav>
+
+<section id="que">
+  <h2>1. ¿Qué es?</h2>
+  <p>Vertex convierte tu <strong>ratón y teclado</strong> en un <strong>mando de Xbox o PlayStation</strong> invisible. El juego cree que juegas con mando, pero tú apuntas con el ratón y te mueves con el teclado.</p>
+  <ul>
+    <li>🖱️ El ratón mueve la cámara (el stick derecho).</li>
+    <li>⌨️ <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> te mueven (el stick izquierdo).</li>
+    <li>🔘 Cada tecla y botón del ratón puede ser cualquier botón del mando.</li>
+  </ul>
+</section>
+
+<section id="antes">
+  <h2>2. Antes de instalar</h2>
+  <ol class="pasos">
+    <li><strong>Apaga la "Integridad de memoria".</strong> Abre <em>Seguridad de Windows → Seguridad del dispositivo → Detalles de aislamiento del núcleo</em> y pon <strong>Integridad de memoria</strong> en <strong>Desactivado</strong>. Reinicia la PC.
+      <div class="nota"><strong>¿Por qué?</strong> Si está encendida, Windows no deja instalar la parte que esconde tu ratón al juego, y el juego también verá el ratón.</div></li>
+    <li><strong>Cierra otros programas de mandos</strong> como reWASD o DS4Windows (también desde el icono junto al reloj).</li>
+    <li><strong>Apaga los mandos de verdad</strong> (los de cable o Bluetooth) mientras uses Vertex.</li>
+  </ol>
+</section>
+
+<section id="instalar">
+  <h2>3. Instalar</h2>
+  <ol class="pasos">
+    <li>Descarga <strong>VertexEmulador-Instalar</strong> desde el canal <strong>#descargar</strong> del Discord.</li>
+    <li>Ábrelo. Si sale <strong>"Windows protegió su PC"</strong>, pulsa <strong>Más información → Ejecutar de todas formas</strong>.</li>
+    <li>Acepta los términos y pulsa <strong>Sí</strong> cuando Windows pida permiso.</li>
+    <li>Cuando termine, <strong>reinicia la PC</strong>.</li>
+    <li>Abre <strong>Vertex Emulador</strong> desde el escritorio. Tienes <strong>3 días gratis</strong> para probarlo.</li>
+  </ol>
+  <p class="tenue">¿Ya lo tenías? Abre el instalador nuevo y se actualiza solo. Tu licencia y tus perfiles se quedan.</p>
+
+  <h3>Si Windows Defender bloquea o borra el instalador</h3>
+  <p>Pasa a veces con programas nuevos que todavía no tienen "fama" en Windows. No es un virus.</p>
+  <ol class="pasos">
+    <li>Abre <strong>Seguridad de Windows → Protección contra virus y amenazas → Historial de protección</strong>.</li>
+    <li>Toca el aviso del instalador de Vertex y pulsa <strong>Acciones → Permitir en el dispositivo</strong> (o <strong>Restaurar</strong>).</li>
+    <li>Vuelve a abrir el instalador.</li>
+  </ol>
+  <details><summary>Opcional: avisar a Microsoft de que es un error (ayuda a que deje de pasar)</summary>
+    <p>Es gratis y tarda unos 3 minutos. Cuantas más personas lo reportan, antes deja Windows de marcarlo.</p>
+    <ol class="pasos">
+      <li>Entra en <strong>microsoft.com/wdsi/filesubmission</strong> e inicia sesión con tu cuenta de Microsoft (la de Hotmail, Outlook o Xbox sirve).</li>
+      <li>Elige <strong>Cliente doméstico</strong> (<em>Home customer</em>) y pulsa <strong>Continuar</strong>.</li>
+      <li>En el producto elige <strong>Microsoft Defender Antivirus</strong>.</li>
+      <li>Sube el archivo <strong>VertexEmulador-Instalar….exe</strong> que descargaste.</li>
+      <li>Donde pregunta qué pasa, elige <strong>"Detectado incorrectamente como malware"</strong> (<em>Incorrectly detected as malware/malicious</em>).</li>
+      <li>Si te pide el nombre de la amenaza, cópialo del <strong>Historial de protección</strong> (por ejemplo, algo como <em>Trojan:Win32/Wacatac</em>).</li>
+      <li>En el comentario puedes poner: <em>"Instalador de Vertex Emulador, emulador de mando descargado de github.com/Abnaris/vertex-emulador. Es un falso positivo."</em> y pulsa <strong>Enviar</strong>.</li>
+    </ol>
+    <p class="tenue">Microsoft lo revisa en unos días. No hace falta esperar: con "Permitir en el dispositivo" ya puedes instalarlo.</p>
+  </details>
+</section>
+
+<section id="primera">
+  <h2>4. Tu primera partida</h2>
+  <ol class="pasos">
+    <li>Abre Vertex y pulsa el botón <strong>⏻ (arriba)</strong> para <strong>encenderlo</strong>. Ahora existe el mando virtual.</li>
+    <li>Entra a tu juego.</li>
+    <li>Dentro del juego pulsa <kbd>F4</kbd>. Esto <strong>activa</strong> Vertex: el ratón y el teclado ya controlan el mando.</li>
+    <li>Para usar el ratón normal en Windows (por ejemplo, en el menú de pausa), pulsa <kbd>F4</kbd> otra vez.</li>
+  </ol>
+  <div class="bien"><strong>¡Listo!</strong> Para Call of Duty ya viene ajustado: no hace falta calibrar si usas los ajustes de la sección 5.</div>
+</section>
+
+<section id="cod">
+  <h2>5. Ajustes de Call of Duty</h2>
+  <p>Vertex viene preparado para estos ajustes del mando en CoD / Warzone. Si los pones igual, funciona perfecto sin calibrar:</p>
+  <table>
+    <tr><th>Ajuste del juego (Mando)</th><th>Pon esto</th></tr>
+    <tr><td>Sensibilidad horizontal y vertical del stick</td><td><strong>4,00</strong> (el máximo)</td></tr>
+    <tr><td>Tipo de curva de respuesta al apuntar</td><td><strong>Lineal</strong></td></tr>
+    <tr><td>Gradiente de la curva de respuesta</td><td><strong>0,00</strong></td></tr>
+    <tr><td>Mín. del stick derecho (zona muerta)</td><td><strong>0</strong></td></tr>
+    <tr><td>Máx. del stick derecho</td><td><strong>100</strong></td></tr>
+    <tr><td>Multiplicador de sensibilidad de la mira</td><td><strong>2,30</strong></td></tr>
+    <tr><td>Tiempo de transición al apuntar</td><td><strong>Gradual</strong></td></tr>
+    <tr><td>Campo de visión</td><td><strong>120</strong></td></tr>
+  </table>
+  <p>¿Prefieres otros ajustes? No pasa nada: <a href="#calibrar">calibra</a> una vez y Vertex se adapta.</p>
+</section>
+
+<section id="sensibilidad">
+  <h2>6. Sensibilidad</h2>
+  <p>En la pestaña <strong>Inicio</strong>, tarjeta <strong>Sensibilidad</strong>:</p>
+  <ol class="pasos">
+    <li>Escribe los <strong>DPI de tu ratón</strong> (míralos en el programa de tu ratón).</li>
+    <li>Escribe tu <strong>Sensibilidad de CoD con ratón</strong>: la que usarías si jugaras con ratón. Vertex calcula los <strong>cm por vuelta</strong> solo.</li>
+    <li>Si lo quieres un poco más rápido o más lento, mueve <strong>Ajuste fino</strong> (1,00 = normal).</li>
+    <li><strong>Vertical</strong>: cuánto más rápido va arriba y abajo (en CoD, 1,70 se siente igual que a los lados).</li>
+  </ol>
+  <p class="tenue">Las perillas se arrastran con el ratón. Con <kbd>Shift</kbd> van más finas, y con doble clic puedes escribir el número.</p>
+</section>
+
+<section id="teclas">
+  <h2>7. Cambiar las teclas</h2>
+  <ol class="pasos">
+    <li>Ve a la pestaña <strong>Teclas</strong>.</li>
+    <li>Haz clic en la tecla o el botón del ratón que quieras cambiar (o pulsa <strong>Añadir tecla</strong>).</li>
+    <li>Se abre una ventana con un mando dibujado: <strong>haz clic en el botón del mando</strong> que quieres. Puedes marcar varios a la vez.</li>
+    <li>Pulsa <strong>Aceptar</strong> y luego <strong>Guardar y aplicar</strong>.</li>
+  </ol>
+  <h3>Capas</h3>
+  <p>Una capa cambia algunas teclas solo mientras mantienes otra. Por ejemplo, la capa <strong>Apuntar</strong> se usa mientras mantienes el <strong>clic derecho</strong>, y <strong>Giro rápido</strong> mientras mantienes el <strong>botón lateral</strong> o <kbd>Insert</kbd> (gira mucho más rápido, para darte la vuelta).</p>
+  <h3>Macros</h3>
+  <p>Una macro pulsa varios botones uno detrás de otro con una sola tecla. Se crean en la pestaña <strong>Macros</strong>.</p>
+</section>
+
+<section id="especiales">
+  <h2>8. Doble toque, mantener, alternar y turbo</h2>
+  <p>En la ventana del mando dibujado, arriba hay tres pestañas. Cada una puede hacer algo distinto con la <strong>misma tecla</strong>:</p>
+  <table>
+    <tr><th>Pestaña</th><th>Cuándo se activa</th></tr>
+    <tr><td><strong>Pulsar</strong></td><td>Al pulsar la tecla (lo normal).</td></tr>
+    <tr><td><strong>Doble toque</strong></td><td>Al pulsarla dos veces rápido.</td></tr>
+    <tr><td><strong>Mantener pulsado</strong></td><td>Al dejarla pulsada casi medio segundo.</td></tr>
+  </table>
+  <div class="nota"><strong>Ojo:</strong> si una tecla usa "Doble toque" o "Mantener", lo de "Pulsar" se hace <strong>al soltarla</strong> (Vertex tiene que esperar un momento para saber qué hiciste).</div>
+  <p>A la derecha eliges <strong>cómo</strong> funciona:</p>
+  <ul>
+    <li><strong>Mantener</strong>: el botón está pulsado mientras mantienes la tecla.</li>
+    <li><strong>Toque</strong>: un pulso cortito, aunque mantengas la tecla.</li>
+    <li><strong>Alternar</strong>: pulsas una vez y el botón se queda pulsado; pulsas otra vez y se suelta.</li>
+    <li><strong>Tecla normal</strong>: la tecla llega al juego como tecla (no usa el mando).</li>
+    <li><strong>Bloquear</strong>: la tecla no hace nada.</li>
+    <li><strong>Turbo</strong>: el botón se pulsa y se suelta solo muy rápido (100 ms = 10 veces por segundo). Ideal para juegos <strong>retro y arcade</strong>.</li>
+  </ul>
+  <div class="aviso"><strong>Turbo en juegos en línea:</strong> muchos juegos en línea no lo permiten. Úsalo bajo tu propio riesgo.</div>
+</section>
+
+<section id="calibrar">
+  <h2>9. Calibrar (solo si hace falta)</h2>
+  <p>Calibrar es cuando Vertex mide cómo gira tu juego para que el ratón se sienta exacto. <strong>Solo hace falta</strong> si usas ajustes de CoD distintos a los de la sección 5, u otro juego.</p>
+  <ol class="pasos">
+    <li>Entra al juego en un sitio <strong>con luz</strong> y con <strong>cosas distintas alrededor</strong> (no un cuarto oscuro ni con todo igual).</li>
+    <li>Mira <strong>al frente</strong> (ni al suelo ni al techo).</li>
+    <li><strong>Mantén apuntando</strong> (clic derecho) y pulsa <kbd>F6</kbd>.</li>
+    <li>No toques nada <strong>hasta 2 minutos</strong>. Suena <strong>1 pitido</strong> al empezar y <strong>2 pitidos</strong> al terminar (1 pitido grave si falla).</li>
+  </ol>
+  <p class="tenue">Si el juego tiene "desenfoque de movimiento", apágalo mientras calibras. Si cambias la sensibilidad o la curva del juego, vuelve a calibrar.</p>
+</section>
+
+<section id="perfiles">
+  <h2>10. Perfiles</h2>
+  <p>En la pestaña <strong>Perfiles</strong> puedes tener varias configuraciones (por ejemplo, una por juego).</p>
+  <ul>
+    <li><strong>Copiar código</strong>: copia tu perfil como un texto para pasárselo a un amigo (o publicarlo en <strong>#configuraciones</strong> del Discord).</li>
+    <li><strong>Pegar código</strong>: carga el perfil que te pasó otra persona.</li>
+  </ul>
+</section>
+
+<section id="atajos">
+  <h2>11. Teclas rápidas</h2>
+  <table>
+    <tr><th>Tecla</th><th>Qué hace</th></tr>
+    <tr><td><kbd>F4</kbd></td><td>Activar o desactivar Vertex dentro del juego.</td></tr>
+    <tr><td><kbd>F6</kbd></td><td>Calibrar (apuntando).</td></tr>
+    <tr><td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Fin</kbd></td><td>Cerrar Vertex al instante (si algo se queda trabado).</td></tr>
+  </table>
+</section>
+
+<section id="problemas">
+  <h2>12. Problemas y cómo arreglarlos</h2>
+  <p>Toca cada problema para ver la solución.</p>
+
+  <details><summary>Sale "Windows protegió su PC"</summary>
+    <p>Es normal con programas nuevos. Pulsa <strong>Más información → Ejecutar de todas formas</strong>.</p></details>
+
+  <details><summary>El antivirus no me deja descargarlo o instalarlo</summary>
+    <p>Algunos antivirus desconfían de los programas que usan mandos virtuales. Busca el archivo en la <strong>cuarentena</strong> de tu antivirus y pulsa <strong>Restaurar / Permitir</strong>. Con Windows Defender, sigue los pasos de <a href="#instalar">"Si Windows Defender bloquea o borra el instalador"</a>; ahí también explica cómo avisar a Microsoft del error para que deje de pasar. Descárgalo solo desde el Discord oficial.</p></details>
+
+  <details><summary>Al instalar sale el aviso de "Integridad de memoria"</summary>
+    <ol>
+      <li>Abre <em>Seguridad de Windows → Seguridad del dispositivo → Detalles de aislamiento del núcleo</em>.</li>
+      <li>Pon <strong>Integridad de memoria</strong> en <strong>Desactivado</strong> y reinicia.</li>
+      <li>Abre otra vez el instalador de Vertex (no hace falta desinstalar) y reinicia otra vez.</li>
+    </ol></details>
+
+  <details><summary>El juego no reconoce el mando</summary>
+    <ul>
+      <li>¿Encendiste Vertex con el botón <strong>⏻</strong> y lo activaste con <kbd>F4</kbd> dentro del juego?</li>
+      <li>Cierra reWASD, DS4Windows y otros programas de mandos, y apaga los mandos de verdad.</li>
+      <li>En el juego, elige que la entrada sea <strong>mando</strong>.</li>
+      <li>Si acabas de instalar, reinicia la PC.</li>
+    </ul></details>
+
+  <details><summary>El juego también ve mi ratón (cambia entre mando y ratón)</summary>
+    <p>Falta el controlador que esconde el ratón. Revisa la <a href="#antes">Integridad de memoria</a>, vuelve a abrir el instalador y reinicia.</p></details>
+
+  <details><summary>La mira va muy rápida o muy lenta</summary>
+    <ul>
+      <li>Revisa los <a href="#cod">ajustes de CoD</a>: si son distintos, <a href="#calibrar">calibra</a>.</li>
+      <li>Para un toque más o menos, mueve <strong>Ajuste fino</strong> en Inicio.</li>
+    </ul></details>
+
+  <details><summary>Al apuntar despacio se siente raro o tengo que mover mucho el ratón</summary>
+    <p>Pasa si cambiaste algún ajuste de "Apuntar" en el juego. Déjalos como en la <a href="#cod">sección 5</a> o <a href="#calibrar">calibra apuntando</a>.</p></details>
+
+  <details><summary>Los giros muy, muy rápidos se quedan un poco cortos</summary>
+    <p>Es un límite de Call of Duty con mando: el juego acelera la cámara poco a poco y ningún programa puede saltarlo. Para darte la vuelta rápido usa la capa <strong>Giro rápido</strong> (botón lateral o <kbd>Insert</kbd>).</p></details>
+
+  <details><summary>La calibración falla</summary>
+    <ul>
+      <li>Busca un sitio <strong>con luz</strong> y con <strong>cosas distintas alrededor</strong>.</li>
+      <li>Mira al frente, no al techo ni al suelo, y no muevas nada.</li>
+      <li>Si la pantalla está en un menú o negra, entra a la partida primero.</li>
+      <li>Apaga el desenfoque de movimiento del juego.</li>
+    </ul></details>
+
+  <details><summary>Una tecla responde un poquito tarde</summary>
+    <p>Si esa tecla tiene <strong>Doble toque</strong> o <strong>Mantener</strong>, Vertex espera un cuarto de segundo para saber qué hiciste. Si no los necesitas, quítalos y la tecla responderá al instante.</p></details>
+
+  <details><summary>Un botón se quedó pulsado</summary>
+    <p>Si usaste <strong>Alternar</strong>, pulsa esa tecla otra vez. Si sigue, desactiva y activa con <kbd>F4</kbd>.</p></details>
+
+  <details><summary>El teclado o el ratón no responden</summary>
+    <p>Pulsa <kbd>F4</kbd> para desactivar Vertex. Si no responde, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Fin</kbd> lo cierra. Como último recurso, reinicia la PC.</p></details>
+
+  <details><summary>Me pide una clave / cambié de PC / reinstalé Windows</summary>
+    <p>La clave va unida a tu PC. Abre un ticket en <strong>#comprar</strong> del Discord con tu <strong>código de equipo</strong> (en la ventana de licencia, botón <strong>Copiar</strong>) y te la cambiamos.</p></details>
+
+  <details><summary>Mi licencia venció</summary>
+    <p>Abre un ticket en <strong>#comprar</strong> para renovarla. Si renuevas antes de que venza, no pierdes días.</p></details>
+</section>
+
+<section id="licencia">
+  <h2>13. Licencia y ayuda</h2>
+  <ul>
+    <li>Las licencias se compran <strong>solo</strong> abriendo un ticket en el Discord oficial: <strong>https://discord.gg/xzA2KBBaVW</strong></li>
+    <li>¿Algo no funciona? Abre un ticket de <strong>soporte</strong> en el Discord.</li>
+  </ul>
+  <div class="aviso"><strong>Cuidado con las estafas:</strong> nadie de Vertex te escribirá primero por privado ni te pedirá contraseñas.</div>
+</section>
+
+<section id="desinstalar">
+  <h2>14. Desinstalar</h2>
+  <p>Menú Inicio → <strong>Desinstalar Vertex Emulador</strong> (o en <em>Configuración → Aplicaciones</em>). Te preguntará si quieres quitar también los controladores; si no sabes, responde lo que viene marcado.</p>
+</section>
+
+</div>
+</body>
+</html>
