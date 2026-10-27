@@ -1,0 +1,101 @@
+TÉRMINOS DE USO Y LICENCIA DE Vertex Emulador
+Última actualización: 26 de octubre de 2026
+
+Al instalar, abrir o usar Vertex Emulador ("el Programa") aceptas estos términos.
+Si no los aceptas, no lo instales ni lo uses.
+
+1. QUIÉN LO VENDE
+   El Programa es de Vertex Emulador ("el Autor"). Contacto y soporte en el servidor de
+   Discord de Vertex: https://discord.gg/xzA2KBBaVW.
+
+2. QUÉ COMPRAS
+   No compras el Programa: compras una licencia personal para usarlo. El Programa,
+   su código, su diseño y su nombre siguen siendo del Autor.
+   Tipos de licencia:
+   a) Prueba gratis: 3 días desde la primera vez que se abre en una computadora.
+      Una sola prueba por persona y por computadora.
+   b) 15 días o mensual: hasta la fecha que dice la clave (15 días o un mes desde la
+      compra). Si no se renueva, el Programa se bloquea al terminar ese día.
+   c) De por vida: mientras exista el Programa (ver punto 9). "De por vida" se refiere
+      a la vida del Programa, no a la del comprador.
+   Cada clave sirve solo en la computadora cuyo "código de equipo" se usó para crearla.
+   Si cambias de computadora, reinstalas Windows o formateas el disco del sistema, el
+   código cambia y hace falta una clave nueva: puedes pedir el cambio hasta 2 veces al
+   año por Discord.
+
+3. LO QUE NO PUEDES HACER
+   - Compartir, prestar, vender, revender o regalar tu licencia o tu clave.
+   - Copiar, publicar o subir el Programa a otros sitios.
+   - Descompilar, desensamblar o modificar el Programa, ni quitar o saltarse el sistema
+     de licencias o sus protecciones, salvo donde la ley lo permita expresamente.
+   - Usar el Programa para hacer otro programa que compita con él.
+   - Usarlo en contra de la ley o de los términos de los juegos o servicios donde lo uses.
+   Si haces algo de esto, el Autor puede cancelar tu licencia sin reembolso.
+
+4. ACTIVACIÓN
+   La licencia se comprueba dentro de tu computadora: el Programa no envía tus datos a
+   ningún servidor. Para activarlo mandas tu código de equipo por Discord y pegas la
+   clave que recibes. Para que la fecha sea correcta, el Programa consulta la hora en
+   internet cuando hay conexión; si atrasas el reloj de la computadora, se bloquea
+   hasta que lo corrijas.
+
+5. USO EN JUEGOS EN LÍNEA. RIESGO DE BANEO
+   El Programa hace que el ratón y el teclado se presenten como un mando. Muchos juegos
+   en línea (por ejemplo, los que usan sistemas antitrampas) prohíben estos programas o
+   los detectan, y pueden expulsar o banear la cuenta.
+   - El Programa no se esconde de los antitrampas ni está pensado para dar ventaja
+     sobre otros jugadores.
+   - Antes de usarlo, revisa las reglas de cada juego. Usarlo es tu decisión y tu
+     responsabilidad.
+   - El Autor no responde por expulsiones, baneos, pérdida de cuentas, objetos,
+     progreso ni dinero gastado en los juegos, y no hace reembolsos por ese motivo.
+
+6. CONTROLADORES QUE INSTALA
+   El Programa instala o usa controladores de terceros (ver
+   CREDITOS-Y-LICENCIAS-DE-TERCEROS.txt) que trabajan a bajo nivel en Windows. Instálalo
+   solo si aceptas eso. Puedes quitarlos con el desinstalador.
+
+7. PAGOS Y REEMBOLSOS
+   - Los precios se publican en el servidor de Discord de Vertex. La compra se hace en un
+     ticket de ese servidor y se paga por PayPal; el Autor no ve ni guarda los
+     datos de tu tarjeta. La clave se entrega en el ticket después del pago.
+   - El Autor nunca te escribe primero por mensaje privado para venderte. Si alguien lo
+     hace diciendo ser el Autor, es una estafa: el Autor no responde por pagos hechos
+     fuera del servidor oficial.
+   - Usa la prueba gratis antes de comprar, para ver si funciona en tu computadora.
+   - Reembolsos: como hay 3 días de prueba gratis para comprobar que funciona, no hay
+     reembolsos después de activar la licencia, salvo lo que exija la ley de tu país.
+   - Si pides un contracargo sin haber escrito antes al soporte, la licencia se cancela.
+
+8. SIN GARANTÍA
+   El Programa se entrega "tal cual". El Autor intenta que funcione bien, pero no
+   garantiza que funcione en todas las computadoras, con todos los juegos, sin fallos o
+   para siempre: Windows, los juegos o sus antitrampas pueden cambiar y dejar de
+   aceptarlo.
+
+9. LÍMITE DE RESPONSABILIDAD
+   En la medida en que lo permita la ley, la responsabilidad total del Autor nunca será
+   mayor que lo que pagaste por la licencia en los últimos 12 meses. El Autor no responde
+   por daños indirectos (pérdida de datos, de cuentas, de tiempo o de ganancias).
+   Si el Autor deja de dar el servicio del Programa, avisará con al menos 30 días de
+   anticipación. Nada de esto quita los derechos que tengas como consumidor según la ley
+   de tu país.
+
+10. ACTUALIZACIONES Y CAMBIOS
+   El Autor puede actualizar el Programa y estos términos. Si los cambios son
+   importantes, se avisará dentro del Programa o por Discord. Seguir usándolo después del
+   aviso significa aceptar los nuevos términos.
+
+11. MARCAS
+   Xbox es marca de Microsoft. PlayStation y DualSense son marcas de Sony Interactive
+   Entertainment. Call of Duty es marca de Activision. Se nombran solo para decir con qué
+   es compatible el Programa; el Programa no está afiliado, patrocinado ni aprobado por
+   ninguna de esas empresas.
+
+12. LEY APLICABLE
+   Estos términos se rigen por las leyes de la República de Honduras. Cualquier conflicto
+   se resolverá ante los tribunales competentes de Honduras, salvo que la ley de tu país
+   diga otra cosa.
+
+13. CONTACTO
+   Servidor de Discord: https://discord.gg/xzA2KBBaVW
