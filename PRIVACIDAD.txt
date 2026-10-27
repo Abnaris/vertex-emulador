@@ -1,0 +1,55 @@
+AVISO DE PRIVACIDAD DE Vertex Emulador
+Última actualización: 26 de octubre de 2026
+
+1. RESPONSABLE
+   Vertex Emulador, contacto en el servidor de Discord de Vertex:
+   https://discord.gg/xzA2KBBaVW.
+
+2. QUÉ DATOS SE USAN Y PARA QUÉ
+   a) Para la licencia y la prueba gratis, dentro de tu computadora:
+      - Un "código de equipo" (como 1A2B-3C4D-5E6F-7A8B) que el Programa calcula a partir
+        del identificador de Windows y del número de serie del disco del sistema. No
+        incluye archivos, contraseñas ni nada de lo que escribes o haces.
+      - La fecha de inicio de la prueba y la última fecha en que se abrió el Programa,
+        guardadas en tu computadora (registro de Windows y carpetas de datos del
+        Programa) para que la prueba dure lo que debe.
+      El Programa no envía estos datos a nadie. El código de equipo solo lo recibe el
+      Autor si tú lo pegas en un ticket del servidor de Discord para comprar o renovar
+      una licencia.
+   b) Para saber la fecha real, el Programa pide la hora a www.microsoft.com cuando hay
+      internet. Esa consulta no lleva datos tuyos (como cualquier visita a una página,
+      ese servidor ve tu dirección IP).
+   c) Al comprar, en el servidor de Discord y por PayPal: tu nombre de usuario de
+      Discord, tu código de equipo, el tipo de licencia y la fecha. El Autor los apunta
+      en un registro de licencias para poder renovar o cambiar tu licencia y darte
+      soporte. El pago lo procesa PayPal; el Autor no recibe los datos de tu tarjeta.
+   d) Si escribes al soporte: lo que mandes (mensajes, capturas, archivos de
+      diagnóstico).
+
+3. LO QUE EL PROGRAMA NO HACE
+   - No guarda ni envía las teclas que pulsas ni los movimientos del ratón.
+   - No hace capturas de pantalla para enviarlas. (La calibración automática mira la
+     pantalla, pero todo se queda en tu computadora; el informe se guarda en
+     %LOCALAPPDATA%\EmuladorMando\diagnostico y solo lo ves tú.)
+   - No vende ni comparte tus datos para publicidad.
+
+4. CON QUIÉN SE COMPARTEN
+   Con nadie más allá de los servicios que tú mismo usas para comprar:
+   - Discord, donde está el servidor de Vertex, se habla y se entrega la clave.
+   - PayPal, que cobra el pago.
+   Estos servicios tienen sus propias políticas de privacidad y pueden estar fuera de
+   tu país.
+
+5. CUÁNTO TIEMPO SE GUARDAN
+   El registro de licencias, mientras tengas una licencia y hasta 12 meses después de
+   que termine, para soporte y renovaciones. Los datos de pago, el tiempo que pidan las
+   leyes fiscales. Los datos de la prueba se quedan en tu computadora hasta que
+   desinstales el Programa.
+
+6. TUS DERECHOS
+   Puedes pedir ver, corregir o borrar tus datos del registro de licencias, u oponerte a
+   su uso, abriendo un ticket en el servidor de Discord de Vertex. Si se borran, el Autor ya
+   no podrá renovar ni cambiar tu licencia.
+
+7. CAMBIOS
+   Si este aviso cambia, se publicará la nueva versión con su fecha.
