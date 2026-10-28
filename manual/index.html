@@ -78,7 +78,7 @@ details[open] summary { margin-bottom: 6px; }
 
 <section id="que">
   <h2>1. ¿Qué es?</h2>
-  <p>Vertex convierte tu <strong>ratón y teclado</strong> en un <strong>mando de Xbox o PlayStation</strong> invisible. El juego cree que juegas con mando, pero tú apuntas con el ratón y te mueves con el teclado.</p>
+  <p>Vertex convierte tu <strong>ratón y teclado</strong> en un <strong>mando de Xbox</strong> invisible. El juego cree que juegas con mando, pero tú apuntas con el ratón y te mueves con el teclado.</p>
   <ul>
     <li>🖱️ El ratón mueve la cámara (el stick derecho).</li>
     <li>⌨️ <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> te mueven (el stick izquierdo).</li>
@@ -152,21 +152,23 @@ details[open] summary { margin-bottom: 6px; }
     <tr><td>Máx. del stick derecho</td><td><strong>100</strong></td></tr>
     <tr><td>Multiplicador de sensibilidad de la mira</td><td><strong>2,30</strong></td></tr>
     <tr><td>Tiempo de transición al apuntar</td><td><strong>Gradual</strong></td></tr>
-    <tr><td>Campo de visión</td><td><strong>120</strong></td></tr>
+    <tr><td>Campo de visión</td><td><strong>El que quieras</strong> (escríbelo también en Vertex, ver abajo)</td></tr>
   </table>
+  <p><strong>Campo de visión:</strong> CoD gira más lento cuanto menor es. Escribe el tuyo en Vertex (<strong>Ajustes → Campo de visión de CoD</strong>) y la calibración se ajusta sola, sin calibrar.</p>
   <p>¿Prefieres otros ajustes? No pasa nada: <a href="#calibrar">calibra</a> una vez y Vertex se adapta.</p>
 </section>
 
 <section id="sensibilidad">
   <h2>6. Sensibilidad</h2>
-  <p>En la pestaña <strong>Inicio</strong>, tarjeta <strong>Sensibilidad</strong>:</p>
+  <p>En la pestaña <strong>Ajustes</strong>, sección <strong>Ratón → stick derecho</strong> (cada ajuste explica debajo qué hace):</p>
   <ol class="pasos">
     <li>Escribe los <strong>DPI de tu ratón</strong> (míralos en el programa de tu ratón).</li>
-    <li>Escribe tu <strong>Sensibilidad de CoD con ratón</strong>: la que usarías si jugaras con ratón. Vertex calcula los <strong>cm por vuelta</strong> solo.</li>
-    <li>Si lo quieres un poco más rápido o más lento, mueve <strong>Ajuste fino</strong> (1,00 = normal). También puedes hacerlo dentro del juego: <kbd>F9</kbd> sube y <kbd>F8</kbd> baja.</li>
-    <li><strong>Vertical</strong>: cuánto más rápido va arriba y abajo (en CoD, 1,70 se siente igual que a los lados).</li>
+    <li>Ajusta <strong>Sensibilidad (cm por vuelta)</strong>: cuántos centímetros mueves el ratón para dar una vuelta completa (menos = más rápido).</li>
+    <li>Pon tu <strong>Campo de visión de CoD</strong> (el mismo número que en el juego). Si lo cambias en el juego, cámbialo también aquí.</li>
+    <li>Si lo quieres un poco más rápido o más lento, mueve <strong>Ajuste fino</strong> (1,00 = normal). También puedes hacerlo dentro del juego: <kbd>F9</kbd> sube y <kbd>F8</kbd> baja. Para usar otras teclas, ve a <strong>Teclas del programa → Subir / bajar sensibilidad</strong>.</li>
+    <li><strong>Relación vertical</strong>: cuánto más rápido va arriba y abajo (en CoD, 1,70 se siente igual que a los lados).</li>
   </ol>
-  <p class="tenue">Las perillas se arrastran con el ratón. Con <kbd>Shift</kbd> van más finas, y con doble clic puedes escribir el número.</p>
+  <p class="tenue">Las barras se arrastran con el ratón. Con <kbd>Shift</kbd> van más finas, con la rueda van de a poco y con doble clic puedes escribir el número. En la pestaña <strong>Inicio</strong> ves un resumen de tu configuración.</p>
 </section>
 
 <section id="teclas">
@@ -179,6 +181,12 @@ details[open] summary { margin-bottom: 6px; }
   </ol>
   <h3>Capas</h3>
   <p>Una capa cambia algunas teclas solo mientras mantienes otra. Por ejemplo, la capa <strong>Apuntar</strong> se usa mientras mantienes el <strong>clic derecho</strong>, y <strong>Giro rápido</strong> mientras mantienes el <strong>botón lateral</strong> o <kbd>Insert</kbd> (gira mucho más rápido, para darte la vuelta).</p>
+  <ul>
+    <li>En la pestaña <strong>Teclas</strong>, arriba, hay un botón por cada capa. Pulsa una y la lista muestra lo que cambian sus teclas.</li>
+    <li>Debajo puedes cambiar su <strong>sensibilidad</strong> y la <strong>tecla</strong> que la activa. Con <strong>+ Nueva capa</strong> creas otra (por ejemplo, «Francotirador» con menos sensibilidad).</li>
+  </ul>
+  <h3>Retroceso al disparar</h3>
+  <p>En cada capa, la barra <strong>Retroceso al disparar</strong> hace que la mira baje un poco mientras mantienes el <strong>clic izquierdo</strong>, para compensar que el arma sube. Elige la capa <strong>Apuntar</strong>, sube la barra poco a poco (empieza por 5–10 %) y prueba contra una pared. <strong>0 = apagado.</strong> En juegos en línea, úsalo bajo tu propio riesgo.</p>
   <h3>Macros</h3>
   <p>Una macro pulsa varios botones uno detrás de otro con una sola tecla. Se crean en la pestaña <strong>Macros</strong>.</p>
 </section>
@@ -208,7 +216,9 @@ details[open] summary { margin-bottom: 6px; }
 <section id="calibrar">
   <h2>9. Calibrar (solo si hace falta)</h2>
   <p>Calibrar es cuando Vertex mide cómo gira tu juego para que el ratón se sienta exacto. <strong>Solo hace falta</strong> si usas ajustes de CoD distintos a los de la sección 5, u otro juego.</p>
+  <p class="tenue">Si solo cambiaste el campo de visión, no hace falta calibrar: escríbelo en Vertex (sección 6).</p>
   <ol class="pasos">
+    <li>Antes, comprueba que el <strong>Campo de visión de CoD</strong> en Vertex sea el mismo que en el juego.</li>
     <li>Entra al juego en un sitio <strong>con luz</strong> y con <strong>cosas distintas alrededor</strong> (no un cuarto oscuro ni con todo igual).</li>
     <li>Mira <strong>al frente</strong> (ni al suelo ni al techo).</li>
     <li><strong>Mantén apuntando</strong> (clic derecho) y pulsa <kbd>F6</kbd>.</li>
@@ -267,8 +277,9 @@ details[open] summary { margin-bottom: 6px; }
 
   <details><summary>La mira va muy rápida o muy lenta</summary>
     <ul>
+      <li>Revisa que el <strong>Campo de visión de CoD</strong> en Vertex sea el mismo que en el juego.</li>
       <li>Revisa los <a href="#cod">ajustes de CoD</a>: si son distintos, <a href="#calibrar">calibra</a>.</li>
-      <li>Para un toque más o menos, mueve <strong>Ajuste fino</strong> en Inicio, o pulsa <kbd>F9</kbd> (más) y <kbd>F8</kbd> (menos) dentro del juego.</li>
+      <li>Para un toque más o menos, mueve <strong>Ajuste fino</strong> en Ajustes, o pulsa <kbd>F9</kbd> (más) y <kbd>F8</kbd> (menos) dentro del juego.</li>
     </ul></details>
 
   <details><summary>Al apuntar despacio se siente raro o tengo que mover mucho el ratón</summary>
