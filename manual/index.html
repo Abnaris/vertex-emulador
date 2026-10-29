@@ -169,6 +169,10 @@ details[open] summary { margin-bottom: 6px; }
     <li><strong>Relación vertical</strong>: cuánto más rápido va arriba y abajo (en CoD, 1,70 se siente igual que a los lados).</li>
   </ol>
   <p class="tenue">Las barras se arrastran con el ratón. Con <kbd>Shift</kbd> van más finas, con la rueda van de a poco y con doble clic puedes escribir el número. En la pestaña <strong>Inicio</strong> ves un resumen de tu configuración.</p>
+  <h3>Caminar despacio</h3>
+  <p>En <strong>Ajustes → Teclado → stick izquierdo</strong> elige una <strong>Tecla para caminar</strong> y la <strong>Fuerza al caminar</strong> (por ejemplo 50 %). Mientras mantienes esa tecla, te mueves más despacio y sin hacer tanto ruido.</p>
+  <h3>Modo estricto</h3>
+  <p>En <strong>Ajustes → Opciones</strong>. Con el emulador activo, el juego no recibe <strong>ninguna</strong> tecla ni botón del ratón que no hayas asignado, así no cambia a "teclado y ratón" por una tecla suelta. La tecla Windows y la de activar (<kbd>F4</kbd>) siempre funcionan: para usar Windows, pulsa <kbd>F4</kbd> antes.</p>
 </section>
 
 <section id="teclas">
@@ -179,6 +183,29 @@ details[open] summary { margin-bottom: 6px; }
     <li>Se abre una ventana con un mando dibujado: <strong>haz clic en el botón del mando</strong> que quieres. Puedes marcar varios a la vez.</li>
     <li>Pulsa <strong>Aceptar</strong> y luego <strong>Guardar y aplicar</strong>.</li>
   </ol>
+  <h3>Teclas de fábrica</h3>
+  <p>Vertex viene con las mismas teclas que CoD / Warzone con teclado, puestas en los botones del mando de fábrica del juego:</p>
+  <table>
+    <tr><th>Tecla</th><th>Hace</th></tr>
+    <tr><td><kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd></td><td>Moverte</td></tr>
+    <tr><td><kbd>Espacio</kbd></td><td>Saltar / trepar</td></tr>
+    <tr><td><kbd>Shift</kbd></td><td>Esprint (dos veces: esprint táctico)</td></tr>
+    <tr><td><kbd>C</kbd></td><td>Agacharse / deslizarse (nunca se tumba)</td></tr>
+    <tr><td><kbd>Ctrl</kbd></td><td>Cuerpo a tierra / tirarse</td></tr>
+    <tr><td>Clic izquierdo / derecho</td><td>Disparar / apuntar (al disparar apuntando, marca al enemigo)</td></tr>
+    <tr><td><kbd>R</kbd> · <kbd>F</kbd></td><td>Recargar · interactuar</td></tr>
+    <tr><td>Rueda · <kbd>1</kbd> <kbd>2</kbd></td><td>Cambiar de arma</td></tr>
+    <tr><td><kbd>G</kbd></td><td>Placa de blindaje</td></tr>
+    <tr><td><kbd>Q</kbd> · <kbd>E</kbd> · <kbd>X</kbd></td><td>Táctico · letal · mejora de campo</td></tr>
+    <tr><td><kbd>V</kbd> o botón lateral 4</td><td>Cuerpo a cuerpo</td></tr>
+    <tr><td>Clic de la rueda</td><td>Marcar</td></tr>
+    <tr><td><kbd>B</kbd> · <kbd>3</kbd></td><td>Modo de disparo · rachas</td></tr>
+    <tr><td><kbd>Tab</kbd> · <kbd>L</kbd></td><td>Inventario · tercera persona</td></tr>
+    <tr><td><kbd>M</kbd> o <kbd>Bloq Mayús</kbd> · <kbd>Esc</kbd></td><td>Mapa · menú</td></tr>
+    <tr><td><kbd>Z</kbd></td><td>Hablar (llega al juego tal cual)</td></tr>
+    <tr><td>Botón lateral 5 o <kbd>Insert</kbd> (mantener)</td><td>Giro rápido</td></tr>
+  </table>
+  <p class="tenue">Para que coincida, deja los botones del mando de CoD como vienen de fábrica.</p>
   <h3>Capas</h3>
   <p>Una capa cambia algunas teclas solo mientras mantienes otra. Por ejemplo, la capa <strong>Apuntar</strong> se usa mientras mantienes el <strong>clic derecho</strong>, y <strong>Giro rápido</strong> mientras mantienes el <strong>botón lateral</strong> o <kbd>Insert</kbd> (gira mucho más rápido, para darte la vuelta).</p>
   <ul>
@@ -188,7 +215,14 @@ details[open] summary { margin-bottom: 6px; }
   <h3>Retroceso al disparar</h3>
   <p>En cada capa, la barra <strong>Retroceso al disparar</strong> hace que la mira baje un poco mientras mantienes el <strong>clic izquierdo</strong>, para compensar que el arma sube. Elige la capa <strong>Apuntar</strong>, sube la barra poco a poco (empieza por 5–10 %) y prueba contra una pared. <strong>0 = apagado.</strong> En juegos en línea, úsalo bajo tu propio riesgo.</p>
   <h3>Macros</h3>
-  <p>Una macro pulsa varios botones uno detrás de otro con una sola tecla. Se crean en la pestaña <strong>Macros</strong>.</p>
+  <p>Una macro pulsa varios botones uno detrás de otro con una sola tecla. Se crean en la pestaña <strong>Macros</strong>:</p>
+  <ol class="pasos">
+    <li>Pulsa <strong>+ Nueva macro</strong> y ponle un nombre.</li>
+    <li>En <strong>Se lanza con</strong> elige una <strong>tecla o botón del ratón</strong>, o un <strong>botón del mando</strong> (por ejemplo RT: se lanza cada vez que disparas, lo pulse la tecla que sea).</li>
+    <li>En <strong>Pasos</strong>, haz clic en cada botón para elegir qué pulsa y pon cuánto tiempo lo <strong>pulsa</strong> y cuánto <strong>espera</strong> después. La <strong>línea de tiempo</strong> te muestra cómo queda.</li>
+    <li>Marca <strong>Repetir mientras se mantenga</strong> si quieres que vuelva a empezar mientras mantienes la tecla o el botón.</li>
+    <li>Pulsa <strong>Guardar y aplicar</strong>. Con <strong>Activa</strong> desmarcado, la macro se guarda pero no hace nada.</li>
+  </ol>
 </section>
 
 <section id="especiales">
